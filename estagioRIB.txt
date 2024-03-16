@@ -1,0 +1,98 @@
+1)
+
+let INDICE = 13;
+let SOMA = 0;
+let K = 0;
+
+while (K < INDICE) {
+  K = K + 1;
+  SOMA = SOMA + K;
+}
+
+console.log(SOMA);
+
+
+
+
+
+2)
+
+function verificaFibonacci(numero) {
+    let primeiro = 0;
+    let segundo = 1;
+    
+    // Se o número for 0, já é considerado na sequência
+    if (numero === 0) {
+        return true;
+    }
+
+    // Enquanto o próximo número na sequência for menor ou igual ao número informado
+    while (segundo <= numero) {
+        // Se o número informado for encontrado na sequência, retorna true
+        if (segundo === numero) {
+            return true;
+        }
+        // Calcula o próximo número na sequência de Fibonacci
+        let proximo = primeiro + segundo;
+        // Atualiza os valores para a próxima iteração
+        primeiro = segundo;
+        segundo = proximo;
+    }
+    
+    // Se o número informado não estiver na sequência, retorna false
+    return false;
+}
+
+// Número a ser verificado na sequência de Fibonacci
+const numeroInformado = 21;
+
+// Verifica se o número informado pertence à sequência de Fibonacci e imprime o resultado
+if (verificaFibonacci(numeroInformado)) {
+    console.log(numeroInformado + " pertence à sequência de Fibonacci.");
+} else {
+    console.log(numeroInformado + " não pertence à sequência de Fibonacci.");
+}
+
+
+3)
+
+a) 9
+b) 128
+c) 49
+d) 100
+e) 13
+f) 20
+
+
+
+
+4)
+
+Ligue o primeiro interruptor e espere alguns minutos.
+Depois de alguns minutos, desligue o primeiro interruptor e ligue o segundo interruptor.
+Entre na sala.
+Agora, veja o que aconteceu:
+
+Se houver uma lâmpada acesa, então o segundo interruptor controla essa lâmpada.
+Se a lâmpada estiver apagada, mas estiver quente, então o primeiro interruptor controla essa lâmpada.
+Se a lâmpada estiver apagada e estiver fria ao toque, então o terceiro interruptor controla essa lâmpada.
+
+
+
+5)
+
+function inverteString(str) {
+    let inverted = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        inverted += str[i];
+    }
+    return inverted;
+}
+
+// String a ser invertida
+const stringOriginal = "Kaiak!";
+
+// Inverte a string e imprime o resultado
+const stringInvertida = inverteString(stringOriginal);
+console.log("String original:", stringOriginal);
+console.log("String invertida:", stringInvertida);
